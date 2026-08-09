@@ -1,0 +1,51 @@
+services:
+  monero-like:
+    build:
+      context: ./monero-like
+      dockerfile: Dockerfile
+    command: ./build/monero_demo
+
+  zcash-like:
+    build:
+      context: ./zcash-like
+      dockerfile: Dockerfile
+    volumes:
+      - ./zcash-like:/app
+    command: cargo run
+
+  chaumian-ecash:
+    build:
+      context: ./chaumian-ecash
+      dockerfile: Dockerfile
+    volumes:
+      - ./chaumian-ecash:/app
+    command: cargo run
+
+  noir:
+    build:
+      context: ./zk-general/noir
+      dockerfile: Dockerfile
+    volumes:
+      - ./zk-general/noir:/app
+    command: nargo execute
+
+  circom:
+    build:
+      context: ./zk-general/circom
+      dockerfile: Dockerfile
+    command: >
+      bash -c "
+      circom circuit.circom
+      --r1cs
+      --wasm
+      --sym
+      -l node_modules
+      "
+      
+  zokrates:
+    build:
+      context: ./zk-general/zokrates
+      dockerfile: Dockerfile
+    volumes:
+      - ./zk-general/zokrates:/app
+    command: bash prove.sh

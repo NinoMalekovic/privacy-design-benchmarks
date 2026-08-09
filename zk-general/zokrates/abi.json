@@ -1,0 +1,40 @@
+{
+  "inputs": [
+    {
+      "name": "state",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "operation",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "p1",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "p2",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "p3",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "public_expected_result",
+      "public": true,
+      "type": "field"
+    }
+  ],
+  "output": {
+    "type": "tuple",
+    "components": {
+      "elements": []
+    }
+  }
+}

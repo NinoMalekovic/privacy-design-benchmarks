@@ -1,0 +1,12 @@
+[package]
+name = "zcash-like"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sha2 = "0.10"
+rand = "0.8"
+bls12_381 = "0.8"
+group = "0.13"
+
+[workspace]

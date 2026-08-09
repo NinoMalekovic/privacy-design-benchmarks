@@ -1,0 +1,44 @@
+// ZoKrates general-purpose private computation example.
+// The helper function operates on values whose visibility is
+// declared by the main entrypoint.
+
+def private_compute(
+    field state,
+    field operation,
+    field parameter1,
+    field parameter2,
+    field parameter3
+) -> field {
+    field result = if operation == 0 {
+        state + parameter1
+    } else {
+        if operation == 1 {
+            state * parameter1
+        } else {
+            (state + parameter1) * parameter2 - parameter3
+        }
+    };
+
+    return result;
+}
+
+def main(
+    private field state,
+    private field operation,
+    private field p1,
+    private field p2,
+    private field p3,
+    field public_expected_result
+) {
+    field result = private_compute(
+        state,
+        operation,
+        p1,
+        p2,
+        p3
+    );
+
+    assert(result == public_expected_result);
+
+    return;
+}

@@ -1,0 +1,43 @@
+# Docker
+*.log
+
+# Rust
+target/
+
+# ZoKrates generated artifacts
+out
+witness
+proof.json
+proving.key
+verification.key
+
+# Circom generated artifacts
+*.r1cs
+*.sym
+circuit_js/
+circuit.wasm
+
+# Noir
+target/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Node dependencies
+**/node_modules/
+
+# Circom generated files
+**/circuit.r1cs
+**/circuit.sym
+**/circuit_js/
+**/*.wasm
+
+# ZoKrates generated proving artifacts
+**/out
+**/out.wtns
+**/witness
+**/proof.json
+**/proving.key
+**/verification.key

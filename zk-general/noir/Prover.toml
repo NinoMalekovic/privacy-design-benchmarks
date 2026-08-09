@@ -1,0 +1,8 @@
+amount = "25"
+nullifier = "125002124"
+random = "42"
+receiver_commitment = "438271468"
+receiver_private = "200"
+secret = "999"
+sender_commitment = "314814767"
+sender_private = "100"
