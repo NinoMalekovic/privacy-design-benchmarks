@@ -1,4 +1,4 @@
-# Privacy Architecture Sandbox
+# Privacy Designs
 
 ## Overview
 
